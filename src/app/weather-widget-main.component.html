@@ -1,0 +1,24 @@
+<header>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <label for="search">City name: </label>
+        <input type="text" name="location" id="location" ngModel>
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<div id="divWeatherMain">
+    <div *ngIf="WeatherData.isDay" class="watherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!WeatherData.isDay" class="watherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>
+    </div>
+    <div *ngIf="WeatherData.cloudiness >= 60" class="watherWidgetRow cloudDiv">
+        <i class="fas fa-3x fa-cloud cloud"></i>
+    </div>
+    <!-- <div class="watherWidgetRow">{{ WeatherData.temp_celcius }}°</div>
+    <div class="watherWidgetRow">{{ WeatherData.temp_min }}° / {{ WeatherData.temp_max }}°</div>
+    <div class="watherWidgetRow">Feels Like: {{ WeatherData.temp_feels_like }}°</div>
+    <div class="watherWidgetRow">{{ WeatherData.name }}</div>
+    <div class="watherWidgetRow">Humidity: {{ WeatherData.main.humidity }}%</div> -->
+</div>
