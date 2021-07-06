@@ -22,6 +22,9 @@
     <div *ngIf="WeatherData.cloudiness >= 60 && !WeatherData.raining" class="watherWidgetRow cloudDiv">
         <i class="fas fa-3x fa-cloud cloud"></i>
     </div>
+    <div *ngIf="WeatherData.cloudiness >= 30 && WeatherData.cloudiness < 60 && !WeatherData.raining" class="watherWidgetRow cloudDiv">
+        <i class="fas fa-3x fa-cloud cloud small"></i>
+    </div>
     <div *ngIf="WeatherData.isDay && WeatherData.raining" class="watherWidgetRow">
         <i class="fas fa-3x fa-sun sun small"></i>
     </div>
@@ -30,5 +33,18 @@
     </div>
 </div>
 <ww-detail-general [WeatherData]="WeatherData"></ww-detail-general>
+<footer>
+    <small>
+        Built with Angular by 
+        <a href="https://miyazakimaiko.com">Maiko Miyazaki</a>. 
+        Reference: <a href="https://www.youtube.com/watch?v=vpq2FxNzgd4&t=24s">Tutorial</a> by Code First
+        and <a href="https://www.linkedin.com/learning/angular-essential-training-2/why-use-angular">Angular Essential Training</a> by Justin Schwartzenberger.
+    </small>
+    <br/>
+    <small>
+        Weather data from 
+        <a href="https://openweathermap.org/">OpenWeatherMap API</a>.
+    </small>
+</footer>
 
 </div>
