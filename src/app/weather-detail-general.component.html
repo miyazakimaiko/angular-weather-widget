@@ -6,7 +6,6 @@
         </igx-tab-header>
         <igx-tab-content>
           <div class="content">
-              <div class="watherWidgetRow">{{ WeatherData.local_time }}</div>
               <div class="row name">{{ WeatherData.name }}</div>
               <div class="row">{{ WeatherData.temp_celcius }}°</div>
               <div class="row">{{ WeatherData.temp_min }}° / {{ WeatherData.temp_max }}°</div>
@@ -44,7 +43,9 @@
         </igx-tab-header>
         <igx-tab-content>
           <div class="content">
-              <div class="row">Visibility: {{ WeatherData.visibility }}</div>
+            <div class="row">Pressure: {{ WeatherData.main.pressure }} hPa</div>
+            <div class="row">Cloudiness: {{ WeatherData.clouds.all }} %</div>
+            <div class="row">Visibility: {{ WeatherData.visibility }} meter</div>
           </div>
         </igx-tab-content>
       </igx-tab-item>
