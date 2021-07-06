@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
-`http://angular-weather-app.com.s3-website-eu-west-1.amazonaws.com/`
+[http://angular-weather-app.com.s3-website-eu-west-1.amazonaws.com/](http://angular-weather-app.com.s3-website-eu-west-1.amazonaws.com/)
 
 ## Reference
 
