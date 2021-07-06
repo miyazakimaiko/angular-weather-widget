@@ -1,7 +1,52 @@
-<div>
-    <div class="watherWidgetRow">{{ WeatherData.temp_celcius }}°</div>
-    <div class="watherWidgetRow">{{ WeatherData.temp_min }}° / {{ WeatherData.temp_max }}°</div>
-    <div class="watherWidgetRow">Feels Like: {{ WeatherData.temp_feels_like }}°</div>
-    <div class="watherWidgetRow">{{ WeatherData.name }}</div>
-    <div class="watherWidgetRow">Humidity: {{ WeatherData.main.humidity }}%</div>
+<div class="igxTabsWrapper">
+  <igx-tabs [tabAlignment]="tabAlignment">
+      <igx-tab-item>
+        <igx-tab-header>
+          <span igxTabHeaderLabel>General</span>
+        </igx-tab-header>
+        <igx-tab-content>
+          <div class="content">
+              <div class="watherWidgetRow">{{ WeatherData.local_time }}</div>
+              <div class="row name">{{ WeatherData.name }}</div>
+              <div class="row">{{ WeatherData.temp_celcius }}°</div>
+              <div class="row">{{ WeatherData.temp_min }}° / {{ WeatherData.temp_max }}°</div>
+              <div class="row">Feels Like: {{ WeatherData.temp_feels_like }}°</div>
+              <div class="row">Humidity: {{ WeatherData.main.humidity }}%</div>
+          </div>
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item>
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Wind</span>
+        </igx-tab-header>
+        <igx-tab-content>
+          <div class="content">
+              <div class="row">Direction: {{ WeatherData.wind.deg }} degrees</div>
+              <div class="row">Gust: {{ WeatherData.wind.gust }} meter/sec</div>
+              <div class="row">Speed: {{ WeatherData.wind.speed }} meter/sec</div>
+          </div>
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item>
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Sun</span>
+        </igx-tab-header>
+        <igx-tab-content>
+          <div class="content">
+              <div class="row">Sunrise: {{ WeatherData.sunrise_time }}</div>
+              <div class="row">Sunset: {{ WeatherData.sunset_time }}</div>
+          </div>
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item>
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Others</span>
+        </igx-tab-header>
+        <igx-tab-content>
+          <div class="content">
+              <div class="row">Visibility: {{ WeatherData.visibility }}</div>
+          </div>
+        </igx-tab-content>
+      </igx-tab-item>
+  </igx-tabs>
 </div>

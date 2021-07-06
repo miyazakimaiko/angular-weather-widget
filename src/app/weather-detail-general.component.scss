@@ -1,0 +1,30 @@
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+$dark-tabs: igx-tabs-theme(
+    $item-background: transparent,
+    $item-hover-background: rgba(white, 0.3),
+    $item-hover-color: white,
+    $item-active-color: white,
+    $item-active-icon-color: #994DCF,
+    $indicator-color: #994DCF,
+    $tab-ripple-color: #994DCF
+);
+
+@include igx-css-vars($dark-tabs);
+
+.igxTabsWrapper {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .content {
+        text-align: center;
+        padding: 60px 0;
+        .row {
+            padding-bottom: 10px;
+        }
+        .name {
+            font-size: 38px;
+            font-weight: bolder;
+        }
+    }
+}

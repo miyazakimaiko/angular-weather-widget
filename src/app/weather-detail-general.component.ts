@@ -8,6 +8,7 @@ import { WeatherDataService } from "./weather-data.service";
 })
 export class WeatherDetailGeneralCompornent implements OnInit {
     @Input() WeatherData: any;
+    public tabAlignment = 'justify';
 
     constructor (private weatherDataService: WeatherDataService) {}
 
